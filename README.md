@@ -1,4 +1,4 @@
-﻿# epoch [![Build status](https://travis-ci.org/tischda/epoch.svg?branch=main)](https://travis-ci.org/tischda/epoch)
+﻿# epoch [![Test](https://github.com/tischda/epoch/actions/workflows/test.yml/badge.svg)](https://github.com/tischda/epoch/actions/workflows/test.yml)
 
 Utility written in [Go](https://www.golang.org) that prints the local time corresponding to the given Unix
 time given as argument (in seconds since January 1, 1970 UTC).
