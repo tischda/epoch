@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"log"
+	"os"
 	"strconv"
 	"time"
 )
@@ -30,7 +30,8 @@ func main() {
 func epochToHumanReadable(s string) string {
 	epoch, err := strconv.ParseInt(s, 10, 64)
 	if err != nil {
-		log.Fatalf("Error: %s", err)
+		fmt.Fprintf(os.Stderr, "Error: %s", err)
+		os.Exit(1)
 	}
 	t := time.Unix(epoch, 0)
 	if utc {

@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"log"
 	"os"
 )
 
@@ -11,8 +10,6 @@ var utc bool
 var showVersion bool
 
 func parseFlags() {
-	log.SetFlags(0)
-
 	flag.BoolVar(&utc, "utc", false, "print time as UTC (Coordinated Universal Time)")
 	flag.BoolVar(&showVersion, "version", false, "print version and exit")
 
