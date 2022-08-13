@@ -16,7 +16,7 @@ init:
 install:
   - go version
   - go env
-  - go install github.com/tischda/go2xunit@latest
+  - go install github.com/tebeka/go2xunit@latest
 
 build_script:
   - for /f "delims=" %%a in ('git describe --tags') do @set version=%%a
