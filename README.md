@@ -1,4 +1,8 @@
-﻿# epoch [![Test](https://github.com/tischda/epoch/actions/workflows/test.yml/badge.svg)](https://github.com/tischda/epoch/actions/workflows/test.yml)
+﻿[![Build Status](https://github.com/tischda/epoch/actions/workflows/build.yml/badge.svg)](https://github.com/tischda/epoch/actions/workflows/build.yml)
+[![Test Status](https://github.com/tischda/epoch/actions/workflows/test.yml/badge.svg)](https://github.com/tischda/epoch/actions/workflows/test.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/tischda/epoch)](https://goreportcard.com/report/github.com/tischda/epoch)
+
+# epoch
 
 Prints the local time corresponding to the given Unix time given as argument (in seconds since January 1, 1970 UTC).
 
