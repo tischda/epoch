@@ -6,8 +6,7 @@ import (
 )
 
 func TestHumanReadable(t *testing.T) {
-	utc = true
-	actual := epochToHumanReadable("1621258963")
+	actual := epochToHumanReadable("1621258963", true)
 	expected := "2021-05-17T13:42:43Z"
 
 	compare(actual, expected, t)
