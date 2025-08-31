@@ -2,6 +2,9 @@
 # https://github.com/mvdan/github-actions-golang/blob/master/.github/workflows/test.yml
 
 name: Test
+permissions:
+  contents: read
+  pull-requests: read
 
 on: [push, pull_request]
 
