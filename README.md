@@ -22,7 +22,7 @@ OPTIONS:
         print version and exit
 ~~~
 
-Examples:
+### Examples
 
 ~~~
 $ epoch 1621258987
