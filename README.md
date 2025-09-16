@@ -1,5 +1,6 @@
 ﻿[![Build Status](https://github.com/tischda/epoch/actions/workflows/build.yml/badge.svg)](https://github.com/tischda/epoch/actions/workflows/build.yml)
 [![Test Status](https://github.com/tischda/epoch/actions/workflows/test.yml/badge.svg)](https://github.com/tischda/epoch/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/tischda/epoch/badge.svg)](https://coveralls.io/r/tischda/epoch)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tischda/epoch)](https://goreportcard.com/report/github.com/tischda/epoch)
 
 # epoch
@@ -20,9 +21,12 @@ go install github.com/tischda/epoch@latest
 Usage: epoch [OPTIONS] <int64> <int64>...
 
 OPTIONS:
+
   -utc
         print time as UTC (Coordinated Universal Time)
-  -version
+  -?, --help
+        display this help message
+  -v, --version
         print version and exit
 ~~~
 

@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"log"
 	"os"
 	"strconv"
 	"time"
@@ -16,18 +17,26 @@ var (
 	commit  string
 )
 
-var (
-	flagHelp    = flag.Bool("help", false, "displays this help message")
-	flagUtc     = flag.Bool("utc", false, "print time as UTC (Coordinated Universal Time)")
-	flagVersion = flag.Bool("version", false, "print version and exit")
-)
+// flags
+type Config struct {
+	utc     bool
+	help    bool
+	version bool
+}
 
-func init() {
-	flag.BoolVar(flagHelp, "h", false, "")
-	flag.BoolVar(flagVersion, "v", false, "")
+func initFlags() *Config {
+	cfg := &Config{}
+	flag.BoolVar(&cfg.utc, "utc", false, "print time as UTC (Coordinated Universal Time)")
+	flag.BoolVar(&cfg.help, "?", false, "")
+	flag.BoolVar(&cfg.help, "help", false, "displays this help message")
+	flag.BoolVar(&cfg.version, "v", false, "")
+	flag.BoolVar(&cfg.version, "version", false, "print version and exit")
+	return cfg
 }
 
 func main() {
+	log.SetFlags(0)
+	cfg := initFlags()
 	flag.Usage = func() {
 		fmt.Fprintln(os.Stderr, "Usage: "+name+` [OPTIONS] <int64> <int64>...
 
@@ -36,10 +45,10 @@ given as argument (in seconds since January 1, 1970 UTC).
 
 OPTIONS:
 
-  -h, --help
-        display this help message
   -utc
         print time as UTC (Coordinated Universal Time)
+  -?, --help
+        display this help message
   -v, --version
         print version and exit
 
@@ -51,12 +60,12 @@ EXAMPLES:`)
 	}
 	flag.Parse()
 
-	if flag.Arg(0) == "version" || *flagVersion {
+	if flag.Arg(0) == "version" || cfg.version {
 		fmt.Printf("%s %s, built on %s (commit: %s)\n", name, version, date, commit)
 		return
 	}
 
-	if *flagHelp {
+	if cfg.help {
 		flag.Usage()
 		return
 	}
@@ -67,7 +76,7 @@ EXAMPLES:`)
 	}
 
 	for _, arg := range flag.Args() {
-		fmt.Println(epochToHumanReadable(arg, *flagUtc))
+		fmt.Println(epochToHumanReadable(arg, cfg.utc))
 	}
 }
 
