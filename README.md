@@ -2,7 +2,7 @@
 [![Test Status](https://github.com/tischda/epoch/actions/workflows/test.yml/badge.svg)](https://github.com/tischda/epoch/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/tischda/epoch/badge.svg)](https://coveralls.io/r/tischda/epoch)
 [![Linter Status](https://github.com/tischda/epoch/actions/workflows/linter.yml/badge.svg)](https://github.com/tischda/epoch/actions/workflows/linter.yml)
-[![License](https://img.shields.io/github/license/tischda/epoch)](/LICENSE)
+[![License](https://img.shields.io/github/license/tischda/epoch.svg)](/LICENSE)
 [![Release](https://img.shields.io/github/release/tischda/epoch.svg)](https://github.com/tischda/epoch/releases/latest)
 
 # epoch
